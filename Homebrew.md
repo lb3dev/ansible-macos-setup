@@ -65,7 +65,6 @@ brew install restic
 brew install --cask android-file-transfer
 brew install --cask sublime-text
 brew install --cask keepassxc
-brew install --cask keepassxc
 brew install --cask firefox
 brew install --cask google-chrome
 brew install --cask visual-studio-code
