@@ -55,7 +55,6 @@ brew cleanup
 
 ### Essential Packages
 ```bash
-brew install ansible
 brew install jq
 brew install bitwarden-cli
 
