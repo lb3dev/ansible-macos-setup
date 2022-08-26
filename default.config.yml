@@ -1,0 +1,24 @@
+---
+dockitems_remove:
+ - 'Launchpad'
+ - 'Messages'
+ - 'Mail'
+ - 'Maps'
+ - 'Photos'
+ - 'FaceTime'
+ - 'Contacts'
+ - 'Reminders'
+ - 'Notes'
+ - 'TV'
+ - 'Music'
+ - 'Podcasts'
+ - 'News'
+ - 'App Store'
+
+dockitems_persist:
+ - name: 'System Preferences'
+   path: '/System/Applications/System Preferences.app'
+ - name: 'Activity Monitor'
+   path: '/System/Applications/Utilities/Activity Monitor.app'
+ - name: 'Terminal'
+   path: '/System/Applications/Utilities/Terminal.app'
