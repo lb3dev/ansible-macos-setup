@@ -1,6 +1,20 @@
 ---
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_apps:
+  - android-file-transfer
+  - sublime-text
+  - keepassxc
+  - firefox
+  - google-chrome
+  - visual-studio-code
+  - pycharm-ce
+
 dockitems_remove:
  - 'Launchpad'
+ - 'Safari'
  - 'Messages'
  - 'Mail'
  - 'Maps'
@@ -16,9 +30,34 @@ dockitems_remove:
  - 'App Store'
 
 dockitems_persist:
- - name: 'System Preferences'
-   path: '/System/Applications/System Preferences.app'
- - name: 'Activity Monitor'
-   path: '/System/Applications/Utilities/Activity Monitor.app'
+ - name: 'Android File Transfer'
+   path: '/Applications/Android File Transfer.app'
+   pos: 2
+ - name: 'KeePassXC'
+   path: '/Applications/KeePassXC.app'
+   pos: 3
+ - name: 'Firefox'
+   path: '/Applications/Firefox.app'
+   pos: 4
+ - name: 'Google Chrome'
+   path: '/Applications/Google Chrome.app'
+   pos: 5
+ - name: 'PyCharm CE'
+   path: '/Applications/PyCharm CE.app'
+   pos: 6
+ - name: 'Visual Studio Code'
+   path: '/Applications/Visual Studio Code.app'
+   pos: 7
+ - name: 'Sublime Text'
+   path: '/Applications/Sublime Text.app'
+   pos: 8
  - name: 'Terminal'
    path: '/System/Applications/Utilities/Terminal.app'
+   pos: 9
+ - name: 'Activity Monitor'
+   path: '/System/Applications/Utilities/Activity Monitor.app'
+   pos: 10
+ - name: 'System Preferences'
+   path: '/System/Applications/System Preferences.app'
+   pos: 11
+
