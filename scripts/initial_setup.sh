@@ -3,7 +3,6 @@
 set -e
 set -u
 set -o pipefail
-set -x
 
 # Set path for this script session
 
