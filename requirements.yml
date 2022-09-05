@@ -1,0 +1,7 @@
+---
+collections:
+  - source: https://github.com/lb3dev/ansible-collection-mac.git
+    type: git
+    version: 79f8224ab915377a55feb1b314e0272c125e4885
+#  - source: ../geerlingguy-mac-1.2.0.tar.gz
+#    type: file
