@@ -6,7 +6,12 @@ set -o pipefail
 
 # Set path for this script session
 
-export PATH="$HOME/Library/Python/3.8/bin:$PATH:/opt/homebrew/bin"
+PATH_EXPORT='export PATH="$HOME/Library/Python/3.8/bin:$PATH:/opt/homebrew/bin"'
+eval "$PATH_EXPORT"
+
+# Create temporary .zshrc for PATH includes
+
+echo -n "$PATH_EXPORT" > ~/.zshrc
 
 # Install ansible via pip
 
@@ -25,5 +30,3 @@ if ! command -v brew &> /dev/null; then
 else
     echo "brew: already installed"
 fi
-
-cp dotfiles/.zshrc ~
