@@ -26,4 +26,4 @@ else
     echo "brew: already installed"
 fi
 
-cp ../dotfiles/.zshrc ~
+cp dotfiles/.zshrc ~
