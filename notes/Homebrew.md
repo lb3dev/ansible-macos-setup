@@ -52,20 +52,3 @@ brew autoremove
 ```bash
 brew cleanup
 ```
-
-### Essential Packages
-```bash
-brew install jq
-brew install bitwarden-cli
-
-brew install rdiff-backup
-brew install restic
-
-brew install --cask android-file-transfer
-brew install --cask sublime-text
-brew install --cask keepassxc
-brew install --cask firefox
-brew install --cask google-chrome
-brew install --cask visual-studio-code
-brew install --cask pycharm-ce
-```
