@@ -1,4 +1,11 @@
 ---
+dotfiles_repo: https://github.com/lb3dev/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/.macos-setup/dotfiles
+dotfiles_files:
+  - .osx
+  - .zshrc
+
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
