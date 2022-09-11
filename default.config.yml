@@ -77,3 +77,6 @@ dockitems_persist:
   - name: 'System Preferences'
     path: '/System/Applications/System Preferences.app'
     pos: 12
+
+osx_defaults:
+  - {domain: NSGlobalDomain, key: com.apple.swipescrolldirection, type: bool, value: false}

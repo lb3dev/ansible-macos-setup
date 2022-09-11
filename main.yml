@@ -9,3 +9,5 @@
       tags: ['homebrew']
     - role: geerlingguy.mac.dock
       tags: ['dock']
+  tasks:
+    - import_tasks: tasks/osx_defaults.yml

@@ -1,0 +1,9 @@
+---
+- name: Run macOS defaults
+  osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+    state: "{{ item.state | default('present') }}"
+  with_items: "{{ osx_defaults | default([]) }}"
