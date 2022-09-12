@@ -79,4 +79,15 @@ dockitems_persist:
     pos: 12
 
 osx_defaults:
+  # Mouse / Pointer
   - {domain: NSGlobalDomain, key: com.apple.swipescrolldirection, type: bool, value: false}
+
+  # Finder
+  - {domain: NSGlobalDomain, key: AppleShowAllExtensions, type: bool, value: true}
+  - {domain: com.apple.finder, key: NewWindowTarget, type: string, value: PfDo}
+  - {domain: com.apple.finder, key: ShowStatusBar, type: bool, value: true}
+  - {domain: com.apple.finder, key: ShowPathbar, type: bool, value: true}
+
+  # Dock
+  - {domain: com.apple.dock, key: tilesize, type: float, value: 70.0}
+  - {domain: com.apple.dock, key: show-recents, type: bool, value: false}
