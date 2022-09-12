@@ -3,6 +3,7 @@
   vars_files:
     - default.config.yml
   roles:
+    - role: terminal
     - role: geerlingguy.dotfiles
       tags: ['dotfiles']
     - role: geerlingguy.mac.homebrew

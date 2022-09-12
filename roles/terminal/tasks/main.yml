@@ -1,0 +1,25 @@
+---
+- name: Get current Terminal profile.
+  command: defaults read com.apple.terminal 'Default Window Settings'
+  register: terminal_theme
+  changed_when: false
+  check_mode: false
+
+- name: Ensure custom Terminal profile is added.
+  copy:
+    src: files/{{ terminal_default_profile }}.terminal
+    dest: /tmp/{{ terminal_default_profile }}.terminal
+  changed_when: false
+  when: "'{{ terminal_default_profile }}' not in terminal_theme.stdout"
+
+- name: Ensure custom Terminal profile is added.
+  command: open /tmp/{{ terminal_default_profile }}.terminal
+  changed_when: false
+  when: "'{{ terminal_default_profile }}' not in terminal_theme.stdout"
+
+- name: Ensure custom Terminal profile is set as default.
+  command: /usr/libexec/PlistBuddy -c "{{ item }}" $HOME/Library/Preferences/com.apple.Terminal.plist
+  loop:
+    - "set 'Startup Window Settings' {{ terminal_default_profile }}"
+    - "set 'Default Window Settings' {{ terminal_default_profile }}"
+  when: "'{{ terminal_default_profile }}' not in terminal_theme.stdout"
