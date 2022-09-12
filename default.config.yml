@@ -22,7 +22,6 @@ homebrew_cask_apps:
   - keepassxc
   - firefox
   - google-chrome
-  - iterm2
   - visual-studio-code
   - pycharm-ce
 
@@ -68,15 +67,12 @@ dockitems_persist:
   - name: 'Terminal'
     path: '/System/Applications/Utilities/Terminal.app'
     pos: 9
-  - name: 'iTerm'
-    path: '/Applications/iTerm.app'
-    pos: 10
   - name: 'Activity Monitor'
     path: '/System/Applications/Utilities/Activity Monitor.app'
-    pos: 11
+    pos: 10
   - name: 'System Preferences'
     path: '/System/Applications/System Preferences.app'
-    pos: 12
+    pos: 11
 
 osx_defaults:
   # Mouse / Pointer
