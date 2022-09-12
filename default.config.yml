@@ -75,15 +75,34 @@ dockitems_persist:
     pos: 11
 
 osx_defaults:
-  # Mouse / Pointer
+  ## General UI
+
+  # Always expand Save UI panels
+  - {domain: NSGlobalDomain, key: NSNavPanelExpandedStateForSaveMode, type: bool, value: true}
+
+  ## Mouse / Pointer
+
+  # Disable Natural Scroll for mice
   - {domain: NSGlobalDomain, key: com.apple.swipescrolldirection, type: bool, value: false}
 
-  # Finder
+  ## Finder
+
+  # Show all file extensions
   - {domain: NSGlobalDomain, key: AppleShowAllExtensions, type: bool, value: true}
+  # Disable delay for title view
+  - {domain: NSGlobalDomain, key: NSToolbarTitleViewRolloverDelay, type: float, value: 0}
+  # Set default opening view to Documents folder
   - {domain: com.apple.finder, key: NewWindowTarget, type: string, value: PfDo}
+  # Enable Quit Finder option in menu (also enables Cmd + Q for Finder)
+  - {domain: com.apple.finder, key: QuitMenuItem, type: bool, value: true}
+  # Show status bar at the bottom
   - {domain: com.apple.finder, key: ShowStatusBar, type: bool, value: true}
+  # Show path bar at the bottom
   - {domain: com.apple.finder, key: ShowPathbar, type: bool, value: true}
 
-  # Dock
-  - {domain: com.apple.dock, key: tilesize, type: float, value: 70.0}
+  ## Dock
+
+  # Set default Dock icon size
+  - {domain: com.apple.dock, key: tilesize, type: float, value: 70}
+  # Remove Recent Applications from Dock
   - {domain: com.apple.dock, key: show-recents, type: bool, value: false}
