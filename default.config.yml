@@ -109,3 +109,12 @@ osx_defaults:
   - {domain: com.apple.dock, key: tilesize, type: float, value: 70}
   # Remove Recent Applications from Dock
   - {domain: com.apple.dock, key: show-recents, type: bool, value: false}
+
+  ## Activity Monitor
+
+  # Show All Processes instead of My Processes by default
+  - {domain: com.apple.ActivityMonitor, key: ShowCategory, type: int, value: 0}
+  # Change update frequency to Often (2 seconds)
+  - {domain: com.apple.ActivityMonitor, key: UpdatePeriod, type: int, value: 2}
+  # Change dock icon to show current CPU usage graph
+  - {domain: com.apple.ActivityMonitor, key: IconType, type: int, value: 5}
