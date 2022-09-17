@@ -70,9 +70,12 @@ dockitems_persist:
   - name: 'Activity Monitor'
     path: '/System/Applications/Utilities/Activity Monitor.app'
     pos: 10
+  - name: 'Disk Utility'
+    path: '/System/Applications/Utilities/Disk Utility.app'
+    pos: 11
   - name: 'System Preferences'
     path: '/System/Applications/System Preferences.app'
-    pos: 11
+    pos: 12
 
 osx_defaults:
   ## General UI
