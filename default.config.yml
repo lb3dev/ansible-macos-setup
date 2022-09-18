@@ -88,6 +88,13 @@ osx_defaults:
   # Disable Natural Scroll for mice
   - {domain: NSGlobalDomain, key: com.apple.swipescrolldirection, type: bool, value: false}
 
+  ## Keyboard / Input
+
+  # Set fastest Key Repeat
+  - {domain: NSGlobalDomain, key: KeyRepeat, type: int, value: 2}
+  # Set faster initial Delay Util Repeat
+  - {domain: NSGlobalDomain, key: InitialKeyRepeat, type: int, value: 25}
+
   ## Finder
 
   # Show all file extensions
@@ -102,6 +109,10 @@ osx_defaults:
   - {domain: com.apple.finder, key: ShowStatusBar, type: bool, value: true}
   # Show path bar at the bottom
   - {domain: com.apple.finder, key: ShowPathbar, type: bool, value: true}
+  # Search the current folder by default rather than full system
+  - {domain: com.apple.finder, key: FXDefaultSearchScope, type: string, value: SCcf}
+  # Disable warning dialog when changing file extensions
+  - {domain: com.apple.finder, key: FXEnableExtensionChangeWarning, type: bool, value: false}
 
   ## Dock
 
