@@ -21,12 +21,6 @@
 xcode-select --install
 ```
 
-### Enable Firewall
-
-```
-System Preferences > Security & Privacy > Firewall > Turn On (Requires Admin)
-```
-
 ### Keyboard Modifier Keys
 
 ```
@@ -34,23 +28,3 @@ System Preferences > Keyboard > Modifier Keys > Select Keyboard with dropdown > 
 ```
 
 When connecting off the shelf Windows ANSI keyboards,  switch the modifier keys **Command** and **Options** keys such that the physical layout of bottom left corner of the keyboard map to **Ctrl + Options + Command**
-
-### Disable Mouse Natural Scroll
-
-```
-System Preferences > Mouse > Uncheck Scroll Direction: Natural
-```
-
-### Disable Screen Saver
-
-```
-System Preferences > Desktop & Screen Saver > Screen Saver > Uncheck Show Screen Saver after
-```
-
-### Energy Saver Off
-
-```
-System Preferences > Energy Saver > Turn display off after: Slide to Never
-
-Check Prevent your Mac from automatically sleeping when display is off
-```
