@@ -1,0 +1,6 @@
+---
+- name: Git checkout backup repo
+  git:
+    repo: https://github.com/lb3dev/ansible-macos-backup
+    dest: "{{ ansible_env.HOME + '/backup' }}"
+    version: 0568ee5b28acb82e9344891201756621e179b5ef
