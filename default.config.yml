@@ -8,11 +8,11 @@ dotfiles_files:
 
 homebrew_taps:
   - homebrew/core
-  - homebrew/cask
 
 homebrew_installed_packages:
   - jq
   - bitwarden-cli
+  - yt-dlp
   - rdiff-backup
   - restic
 
