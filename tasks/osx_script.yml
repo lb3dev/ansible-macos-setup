@@ -3,7 +3,9 @@
   shell: "{{ osx_script | default(ansible_env.HOME + '/.osx')}} 2>&1"
   become: true
   register: osx_script_result
+  when: initial_setup
 
 - name: Print .osx script output
   debug:
     var: osx_script_result.stdout_lines
+  when: initial_setup
