@@ -1,0 +1,9 @@
+---
+- name: Run .osx script
+  shell: "{{ osx_script | default(ansible_env.HOME + '/.osx')}} 2>&1"
+  become: true
+  register: osx_script_result
+
+- name: Print .osx script output
+  debug:
+    var: osx_script_result.stdout_lines

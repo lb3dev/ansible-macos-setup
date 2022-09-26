@@ -12,4 +12,5 @@
       tags: ['dock']
   tasks:
     - import_tasks: tasks/osx_defaults.yml
+    - import_tasks: tasks/osx_script.yml
     - import_tasks: tasks/backup.yml
