@@ -10,6 +10,7 @@
       tags: ['homebrew']
     - role: geerlingguy.mac.dock
       tags: ['dock']
+    - role: browser
   tasks:
     - import_tasks: tasks/osx_defaults.yml
     - import_tasks: tasks/osx_script.yml

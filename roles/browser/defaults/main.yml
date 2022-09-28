@@ -1,0 +1,8 @@
+---
+firefox_initial_pages:
+  - 'about:preferences'
+  - 'https://addons.mozilla.org/en-CA/firefox/addon/ublock-origin'
+
+chrome_initial_pages:
+  - 'chrome://settings'
+  - 'https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb?hl=en-US'
