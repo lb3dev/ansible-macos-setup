@@ -14,6 +14,7 @@ homebrew_taps:
 homebrew_installed_packages:
   - jq
   - bitwarden-cli
+  - ffmpeg
   - yt-dlp
   - rdiff-backup
   - restic
