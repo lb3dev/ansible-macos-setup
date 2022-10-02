@@ -89,6 +89,8 @@ osx_defaults:
 
   # Always expand Save UI panels
   - {domain: NSGlobalDomain, key: NSNavPanelExpandedStateForSaveMode, type: bool, value: true}
+  # Save to disk (not to iCloud) by default
+  - {domain: NSGlobalDomain, key: NSDocumentSaveNewDocumentsToCloud, type: bool, value: false}
 
   ## Mouse / Pointer
 
@@ -120,6 +122,8 @@ osx_defaults:
   - {domain: com.apple.finder, key: FXDefaultSearchScope, type: string, value: SCcf}
   # Disable warning dialog when changing file extensions
   - {domain: com.apple.finder, key: FXEnableExtensionChangeWarning, type: bool, value: false}
+  # Avoid creating .DS_Store files on network volumes
+  - {domain: com.apple.desktopservices, key: DSDontWriteNetworkStores, type: bool, value: true}
 
   ## Dock
 
