@@ -91,6 +91,14 @@ osx_defaults:
   - {domain: NSGlobalDomain, key: NSNavPanelExpandedStateForSaveMode, type: bool, value: true}
   # Save to disk (not to iCloud) by default
   - {domain: NSGlobalDomain, key: NSDocumentSaveNewDocumentsToCloud, type: bool, value: false}
+  # Always show scroll bars (WhenScrolling, Automatic and Always)
+  - {domain: NSGlobalDomain, key: AppleShowScrollBars, type: string, value: Always}
+  # Expand Save panels
+  - {domain: NSGlobalDomain, key: NSNavPanelExpandedStateForSaveMode, type: bool, value: true}
+  - {domain: NSGlobalDomain, key: NSNavPanelExpandedStateForSaveMode2, type: bool, value: true}
+  # Expand print panels
+  - {domain: NSGlobalDomain, key: PMPrintingExpandedStateForPrint, type: bool, value: true}
+  - {domain: NSGlobalDomain, key: PMPrintingExpandedStateForPrint2, type: bool, value: true}
 
   ## Mouse / Pointer
 
@@ -103,6 +111,14 @@ osx_defaults:
   - {domain: NSGlobalDomain, key: KeyRepeat, type: int, value: 2}
   # Set faster initial Delay Util Repeat
   - {domain: NSGlobalDomain, key: InitialKeyRepeat, type: int, value: 25}
+  # Disable auto capitalization
+  - {domain: NSGlobalDomain, key: NSAutomaticCapitalizationEnabled, type: bool, value: false}
+  # Disable smart dashes
+  - {domain: NSGlobalDomain, key: NSAutomaticDashSubstitutionEnabled, type: bool, value: false}
+  # Disable period substitution
+  - {domain: NSGlobalDomain, key: NSAutomaticPeriodSubstitutionEnabled, type: bool, value: false}
+  # Disable smart quotes
+  - {domain: NSGlobalDomain, key: NSAutomaticQuoteSubstitutionEnabled, type: bool, value: false}
 
   ## Finder
 
@@ -124,6 +140,8 @@ osx_defaults:
   - {domain: com.apple.finder, key: FXEnableExtensionChangeWarning, type: bool, value: false}
   # Avoid creating .DS_Store files on network volumes
   - {domain: com.apple.desktopservices, key: DSDontWriteNetworkStores, type: bool, value: true}
+  # Avoid creating .DS_Store files on USB volumes
+  - {domain: com.apple.desktopservices, key: DSDontWriteUSBStores, type: bool, value: true}
 
   ## Dock
 
