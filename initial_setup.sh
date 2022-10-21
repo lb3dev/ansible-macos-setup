@@ -35,4 +35,4 @@ fi
 # Immediately run full ansible setup
 
 ansible-galaxy install -r requirements.yml
-ansible-playbook main.yml --ask-become-pass -e 'initial_setup=true'
+ansible-playbook main.yml -e 'initial_setup=true'
