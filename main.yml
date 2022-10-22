@@ -5,7 +5,7 @@
   vars_prompt:
     - name: ansible_become_password
       prompt: Please enter sudo password (used for become, homebrew)
-      private: yes
+      private: true
   pre_tasks:
     - name: Set homebrew sudo password
       set_fact:
