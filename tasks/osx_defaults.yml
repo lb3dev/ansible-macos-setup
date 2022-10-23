@@ -1,4 +1,11 @@
 ---
+- name: Touch Xcode.app
+  copy:
+    content: ""
+    dest: /Applications/Xcode.app
+    force: false
+  when: no_xcode_install | default(false)
+
 - name: Run macOS defaults
   osx_defaults:
     domain: "{{ item.domain }}"
@@ -7,3 +14,18 @@
     value: "{{ item.value }}"
     state: "{{ item.state | default('present') }}"
   with_items: "{{ osx_defaults | default([]) }}"
+
+- name: Kill mds process
+  command: killall mds
+  become: true
+  when: initial_setup
+
+- name: Enable Spotlight indexing on main volume
+  command: mdutil -i on /
+  become: true
+  when: initial_setup
+
+- name: Rebuild main volume index
+  command: mdutil -E /
+  become: true
+  when: initial_setup
