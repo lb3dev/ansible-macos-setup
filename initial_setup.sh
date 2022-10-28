@@ -4,20 +4,9 @@ set -e
 set -u
 set -o pipefail
 
-# Set path for this script session
+# Set path for homebrew
 
-MACOS_VERSION=$(sw_vers -productVersion)
-
-if [[ $MACOS_VERSION == 12.6 ]]; then
-  export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"
-else
-  export PATH="$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:$PATH"
-fi
-
-# Install ansible via pip
-
-pip3 install --upgrade pip
-pip3 install ansible
+export PATH="$PATH:/opt/homebrew/bin"
 
 # Install Homebrew if not installed (https://brew.sh)
 
@@ -32,7 +21,16 @@ else
     echo "brew: already installed"
 fi
 
-# Immediately run full ansible setup
+# Setup virtualenv, update pip and install ansible
+
+/usr/bin/python3 -m venv ~/.macos-setup/venv-ansible
+
+source ~/.macos-setup/venv-ansible/bin/activate
+
+pip install --upgrade pip
+pip install -r requirements.txt
+
+# Run macos ansible immediately
 
 ansible-galaxy install -r requirements.yml
 ansible-playbook main.yml -e 'initial_setup=true'

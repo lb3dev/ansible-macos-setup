@@ -2,10 +2,10 @@ all:
 		./initial_setup.sh
 
 run:
-		ansible-playbook main.yml
+		source ~/.macos-setup/venv-ansible/bin/activate && ansible-playbook main.yml
 
 dep:
-		pip3 install -r requirements.txt
+		source ~/.macos-setup/venv-ansible/bin/activate && pip install -r requirements.txt
 
 lint:
-		yamllint .
+		source ~/.macos-setup/venv-ansible/bin/activate && yamllint .
