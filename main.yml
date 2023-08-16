@@ -16,10 +16,14 @@
       tags: ['dotfiles']
     - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
+      when: ansible_become_password is defined and ansible_become_password != ''
     - role: geerlingguy.mac.dock
       tags: ['dock']
+      when: ansible_become_password is defined and ansible_become_password != ''
     - role: browser
   tasks:
     - import_tasks: tasks/osx_defaults.yml
+      when: ansible_become_password is defined and ansible_become_password != ''
     - import_tasks: tasks/osx_script.yml
+      when: ansible_become_password is defined and ansible_become_password != ''
     - import_tasks: tasks/backup.yml
