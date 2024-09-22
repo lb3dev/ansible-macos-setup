@@ -1,8 +1,8 @@
 ---
 roles:
   - name: geerlingguy.dotfiles
+    version: "1.2.1"
 
 collections:
-  - source: https://github.com/lb3dev/ansible-collection-mac.git
-    type: git
-    version: fd11b61aec8a847a3d350b538dc1bc9516f5c964
+  - name: geerlingguy.mac
+    version: "4.0.2"
