@@ -3,4 +3,4 @@
   git:
     repo: https://github.com/lb3dev/ansible-macos-backup
     dest: "{{ ansible_env.HOME + '/.setup/ansible-macos-backup' }}"
-    version: master
+    version: e39a57651cd39ddc9b942d2a4628f8ed6fe36bb7
