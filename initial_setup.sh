@@ -1,4 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# Create ~/.setup as the default folder to store all setup related logs and files
+SETUP_DIR=~/.setup
+mkdir -p "$SETUP_DIR"
+
+# Capture all logs from this script to a new setup log file
+CURR_DATE=$(date +%F_%T)
+LOGFILE="$SETUP_DIR/setup-$CURR_DATE.log"
+touch "$LOGFILE"
+exec > >(tee -a "$LOGFILE") 2>&1
+
+echo "Running setup script at: $CURR_DATE"
 
 set -e
 set -u
