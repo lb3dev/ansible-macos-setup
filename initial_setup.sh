@@ -5,32 +5,30 @@ set -u
 set -o pipefail
 
 # Set path for homebrew
-
 export PATH="$PATH:/opt/homebrew/bin"
 
 # Install Homebrew if not installed (https://brew.sh)
 
 if ! command -v brew &> /dev/null; then
-
+    set -v
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-    # Turn off Homebrew analytics
-
-    brew analytics off
 else
     echo "brew: already installed"
 fi
 
-# Setup virtualenv, update pip and install ansible
+brew analytics off
+set +v
 
-/usr/bin/python3 -m venv ~/.macos-setup/venv-ansible
+# Setup virtualenv, update pip and install ansible and dependencies
+set -x
+/usr/bin/python3 -m venv ~/.setup/venv-ansible
 
-source ~/.macos-setup/venv-ansible/bin/activate
+set +x
+source ~/.setup/venv-ansible/bin/activate
 
+set -x
 pip install --upgrade pip
 pip install -r requirements.txt
-
-# Run macos ansible immediately
-
 ansible-galaxy install -r requirements.yml
+
 ansible-playbook main.yml -e 'initial_setup=true'
