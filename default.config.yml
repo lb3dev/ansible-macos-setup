@@ -11,11 +11,9 @@ homebrew_taps: []
 
 homebrew_installed_packages:
   - jq
-  - bitwarden-cli
   - ffmpeg
   - yt-dlp
   - rdiff-backup
-  - restic
 
 homebrew_cask_apps:
   - android-file-transfer
