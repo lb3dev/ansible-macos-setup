@@ -48,6 +48,8 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ansible-galaxy install -r requirements.yml
 
+sudo ./osx.sh
+
 # Restore original file descriptors for stdout and stderr
 set +x
 exec 1>&3 3>&-
