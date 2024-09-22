@@ -8,8 +8,7 @@ dotfiles_files:
   - .osx
   - .zshrc
 
-homebrew_taps:
-  - homebrew/core
+homebrew_taps: []
 
 homebrew_installed_packages:
   - jq
@@ -45,6 +44,7 @@ dockitems_remove:
   - 'Podcasts'
   - 'News'
   - 'App Store'
+  - 'Freeform'
 
 dockitems_persist:
   - name: 'Android File Transfer'
@@ -80,8 +80,8 @@ dockitems_persist:
   - name: 'Disk Utility'
     path: '/System/Applications/Utilities/Disk Utility.app'
     pos: 12
-  - name: 'System Preferences'
-    path: '/System/Applications/System Preferences.app'
+  - name: 'System Settings'
+    path: '/System/Applications/System Settings.app'
     pos: 13
 
 no_xcode_install: true
