@@ -1,0 +1,20 @@
+---
+# Adding an empty Xcode.app allows the "Developer" category to show up in System Settings for Spotlight search categories
+- name: Touch Xcode.app
+  copy:
+    content: ""
+    dest: /Applications/Xcode.app
+    force: false
+  when: no_xcode_install | default(false)
+
+- name: Kill mds process
+  command: killall mds
+  become: true
+
+- name: Enable Spotlight indexing on main volume
+  command: mdutil -i on /
+  become: true
+
+- name: Rebuild main volume index
+  command: mdutil -E /
+  become: true

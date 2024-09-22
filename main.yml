@@ -20,5 +20,6 @@
     - role: browser
   tasks:
     - import_tasks: tasks/osx_defaults.yml
+    - import_tasks: tasks/spotlight.yml
     - import_tasks: tasks/osx_script.yml
     - import_tasks: tasks/backup.yml
