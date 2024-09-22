@@ -1,4 +1,5 @@
 ---
+# Adding an empty Xcode.app allows the "Developer" category to show up in System Settings for Spotlight search categories
 - name: Touch Xcode.app
   copy:
     content: ""
