@@ -11,15 +11,23 @@
         initial_setup: "{{ initial_setup_var == 'y' or initial_setup_var == 'Y' }}"
   roles:
     - role: terminal
+      when: configure_terminal
     - role: geerlingguy.dotfiles
+      when: configure_dotfiles
       tags: ['dotfiles']
     - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
     - role: geerlingguy.mac.dock
+      when: configure_dock
       tags: ['dock']
     - role: browser
+      when: configure_browser
   tasks:
     - import_tasks: tasks/osx_defaults.yml
+      when: configure_defaults
     - import_tasks: tasks/spotlight.yml
+      when: configure_spotlight
     - import_tasks: tasks/osx_script.yml
+      when: configure_osx
     - import_tasks: tasks/backup.yml
+      when: configure_backup
