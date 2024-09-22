@@ -7,14 +7,26 @@
     force: false
   when: no_xcode_install | default(false)
 
+- name: Set Spotlight defaults
+  osx_defaults:
+    domain: "{{ spotlight_defaults.domain }}"
+    key: "{{ spotlight_defaults.key }}"
+    type: "{{ spotlight_defaults.type }}"
+    value: "{{ spotlight_defaults.value }}"
+    state: present
+  when: configure_spotlight
+
 - name: Kill mds process
   command: killall mds
+  when: configure_spotlight
   become: true
 
 - name: Enable Spotlight indexing on main volume
   command: mdutil -i on /
+  when: configure_spotlight
   become: true
 
 - name: Rebuild main volume index
   command: mdutil -E /
+  when: configure_spotlight
   become: true

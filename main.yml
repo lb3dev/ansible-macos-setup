@@ -26,7 +26,6 @@
     - import_tasks: tasks/osx_defaults.yml
       when: configure_defaults
     - import_tasks: tasks/spotlight.yml
-      when: configure_spotlight
     - import_tasks: tasks/osx_script.yml
       when: configure_osx
     - import_tasks: tasks/backup.yml
