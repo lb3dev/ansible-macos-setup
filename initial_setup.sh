@@ -9,6 +9,10 @@ mkdir -p "$SETUP_DIR"
 # Capture all logs from this script to a new setup log file
 LOGFILE="$SETUP_DIR/setup-$CURR_DATE.log"
 touch "$LOGFILE"
+
+# Save file descriptors for stdout and stderr, write all further output to logfile
+exec 3>&1
+exec 4>&2
 exec > >(tee -a "$LOGFILE") 2>&1
 
 echo "Running setup script at: $CURR_DATE"
@@ -43,5 +47,10 @@ set -x
 pip install --upgrade pip
 pip install -r requirements.txt
 ansible-galaxy install -r requirements.yml
+
+# Restore original file descriptors for stdout and stderr
+set +x
+exec 1>&3 3>&-
+exec 2>&4 4>&-
 
 ansible-playbook main.yml -e 'initial_setup=true'
