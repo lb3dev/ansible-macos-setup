@@ -3,13 +3,12 @@
   vars_files:
     - default.config.yml
   vars_prompt:
-    - name: ansible_become_password
-      prompt: Please enter sudo password (used for become, homebrew)
-      private: true
+    - name: initial_setup_var
+      prompt: Run full initial setup (browser open pages, macOS defaults)? (Y/n)
   pre_tasks:
-    - name: Set homebrew sudo password
+    - name: Set initial setup variable
       set_fact:
-        homebrew_cask_sudo_password: "{{ ansible_become_password }}"
+        initial_setup: "{{ initial_setup_var == 'y' or initial_setup_var == 'Y' }}"
   roles:
     - role: terminal
     - role: geerlingguy.dotfiles
