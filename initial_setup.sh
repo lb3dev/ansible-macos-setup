@@ -53,5 +53,6 @@ set +x
 exec 1>&3 3>&-
 exec 2>&4 4>&-
 
+set -x
 export ANSIBLE_LOG_PATH="$SETUP_DIR/ansible-$CURR_DATE.log"
 ansible-playbook main.yml -K
