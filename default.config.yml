@@ -10,6 +10,7 @@ dotfiles_files:
 homebrew_taps: []
 
 homebrew_installed_packages:
+  - dockutil
   - jq
   - ffmpeg
   - yt-dlp
@@ -25,6 +26,7 @@ homebrew_cask_apps:
   - pycharm-ce
   - utm
 
+dockutil_install: false
 dockitems_remove:
   - 'Launchpad'
   - 'Safari'
