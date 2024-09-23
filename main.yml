@@ -9,6 +9,15 @@
     - name: Set initial setup variable
       set_fact:
         initial_setup: "{{ initial_setup_var == 'y' or initial_setup_var == 'Y' }}"
+    - name: Update dockitems_persist_items with pos numbers
+      set_fact:
+        dockitems_persist: "{{ dockitems_persist | default([]) + [{ 'name': item.name, 'path': item.path, 'pos': dockitems_starting_pos | int }] }}"
+        dockitems_starting_pos: "{{ dockitems_starting_pos | int + 1 }}"
+      with_items: "{{ dockitems_persist_items | default([]) }}"
+    - name: Display dockitems_persist
+      debug:
+        msg: ""
+      with_items: "{{ dockitems_persist }}"
   roles:
     - role: terminal
       when: configure_terminal
