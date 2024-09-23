@@ -2,13 +2,7 @@
 - hosts: all
   vars_files:
     - default.config.yml
-  vars_prompt:
-    - name: initial_setup_var
-      prompt: Run full initial setup (browser open pages, macOS defaults)? (Y/n)
   pre_tasks:
-    - name: Set initial setup variable
-      set_fact:
-        initial_setup: "{{ initial_setup_var == 'y' or initial_setup_var == 'Y' }}"
     - name: Update dockitems_persist_items with pos numbers
       set_fact:
         dockitems_persist: "{{ dockitems_persist | default([]) + [{ 'name': item.name, 'path': item.path, 'pos': dockitems_starting_pos | int }] }}"

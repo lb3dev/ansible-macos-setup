@@ -2,9 +2,7 @@
 - name: Open Firefox initial pages
   command: open -a 'Firefox' {{ item }}
   with_items: "{{ firefox_initial_pages | default([]) }}"
-  when: initial_setup
 
 - name: Open Chrome initial pages
   command: open -a 'Google Chrome' {{ item }}
   with_items: "{{ chrome_initial_pages | default([]) }}"
-  when: initial_setup

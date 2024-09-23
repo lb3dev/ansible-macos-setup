@@ -7,7 +7,6 @@ configure_defaults: true
 configure_backup: true
 
 configure_spotlight: false
-initial_setup: false
 
 dotfiles_repo: https://github.com/lb3dev/dotfiles.git
 dotfiles_repo_version: 53ce54b3165f5d3165fa85de49843fb1fe5fc493
