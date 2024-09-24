@@ -1,0 +1,18 @@
+---
+- import_role:
+    name: geerlingguy.mac.dock
+  tags: ['dock']
+
+- name: Pause for 3 seconds after dock changes with persists
+  ansible.builtin.pause:
+    seconds: 3
+  tags: ['dock']
+
+- name: Restart Dock
+  command: killall Dock
+  tags: ['dock']
+
+- name: Pause for 7 seconds after dock restart
+  ansible.builtin.pause:
+    seconds: 7
+  tags: ['dock']

@@ -20,9 +20,6 @@
       tags: ['dotfiles']
     - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
-    - role: geerlingguy.mac.dock
-      when: configure_dock
-      tags: ['dock']
     - role: browser
       when: configure_browser
   tasks:
@@ -31,3 +28,5 @@
     - import_tasks: tasks/spotlight.yml
     - import_tasks: tasks/backup.yml
       when: configure_backup
+    - import_tasks: tasks/dock.yml
+      when: configure_dock
