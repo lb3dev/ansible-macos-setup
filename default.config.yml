@@ -184,8 +184,3 @@ osx_defaults:
   - {domain: com.apple.ActivityMonitor, key: UpdatePeriod, type: int, value: 2}
   # Change dock icon to show current CPU usage graph
   - {domain: com.apple.ActivityMonitor, key: IconType, type: int, value: 5}
-
-  ## Safari
-
-  # Always show full url in Safari url bar
-  - {domain: com.apple.Safari, key: ShowFullURLInSmartSearchField, type: bool, value: true}
