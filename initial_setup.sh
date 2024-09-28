@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 SETUP_DIR=~/.setup
-CURR_DATE=$(date +%F_%T)
+CURR_DATE=$(date +%Y-%m-%d-%H%M%S)
 
 # Create ~/.setup as the default folder to store all setup related logs and files
 mkdir -p "$SETUP_DIR"
