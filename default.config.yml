@@ -59,6 +59,8 @@ dockitems_persist_items:
     path: '/System/Applications/Calendar.app'
   - name: 'Android File Transfer'
     path: '/Applications/Android File Transfer.app'
+  - name: 'Safari'
+    path: '/Applications/Safari.app'
   - name: 'Firefox'
     path: '/Applications/Firefox.app'
   - name: 'Google Chrome'
