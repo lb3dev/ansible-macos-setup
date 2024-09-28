@@ -162,6 +162,10 @@ osx_defaults:
   - {domain: com.apple.finder, key: ShowStatusBar, type: bool, value: true}
   # Show path bar at the bottom
   - {domain: com.apple.finder, key: ShowPathbar, type: bool, value: true}
+  # Default to column view
+  - {domain: com.apple.finder, key: FXPreferredViewStyle, type: string, value: clmv}
+  # Keep folders above files
+  - {domain: com.apple.finder, key: _FXSortFoldersFirst, type: bool, value: true}
   # Search the current folder by default rather than full system
   - {domain: com.apple.finder, key: FXDefaultSearchScope, type: string, value: SCcf}
   # Disable warning dialog when changing file extensions
