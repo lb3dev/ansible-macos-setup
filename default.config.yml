@@ -152,6 +152,8 @@ osx_defaults:
   - {domain: NSGlobalDomain, key: AppleShowAllExtensions, type: bool, value: true}
   # Disable delay for title view
   - {domain: NSGlobalDomain, key: NSToolbarTitleViewRolloverDelay, type: float, value: 0}
+  # Show all hidden files
+  - {domain: com.apple.finder, key: AppleShowAllFiles, type: bool, value: true}
   # Set default opening view to Documents folder
   - {domain: com.apple.finder, key: NewWindowTarget, type: string, value: PfDo}
   # Enable Quit Finder option in menu (also enables Cmd + Q for Finder)
