@@ -5,4 +5,4 @@ firefox_initial_pages:
 
 chrome_initial_pages:
   - 'chrome://settings'
-  - 'https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb?hl=en-US'
+  - 'chrome://password-manager/settings'
