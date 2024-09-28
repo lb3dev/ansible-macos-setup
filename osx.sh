@@ -21,8 +21,8 @@ set -x
 # Enable Firewall
 /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
-# Set Firewall to block all connections
-# /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall on
+# Set Firewall to block all incoming connections
+/usr/libexec/ApplicationFirewall/socketfilterfw --setblockall on
 
 ###############################################################################
 # Power Management                                                            #
