@@ -181,6 +181,8 @@ osx_defaults:
 
   # Set default Dock icon size
   - {domain: com.apple.dock, key: tilesize, type: float, value: 70}
+  # Lock Dock icon size
+  - {domain: com.apple.dock, key: size-immutable, type: bool, value: true}
   # Remove Recent Applications from Dock
   - {domain: com.apple.dock, key: show-recents, type: bool, value: false}
 
