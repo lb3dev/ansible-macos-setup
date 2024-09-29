@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
 SETUP_DIR=~/.setup
+SETUP_LOGS_DIR="$SETUP_DIR/logs"
 CURR_DATE=$(date +%Y-%m-%d-%H%M%S)
 
 # Create ~/.setup as the default folder to store all setup related logs and files
 mkdir -p "$SETUP_DIR"
+mkdir -p "$SETUP_LOGS_DIR"
 
 # Capture all logs from this script to a new setup log file
-LOGFILE="$SETUP_DIR/setup-$CURR_DATE.log"
+LOGFILE="$SETUP_LOGS_DIR/setup-$CURR_DATE.log"
 touch "$LOGFILE"
 
 # Save file descriptors for stdout and stderr, write all further output to logfile
@@ -56,5 +58,5 @@ exec 1>&3 3>&-
 exec 2>&4 4>&-
 
 set -x
-export ANSIBLE_LOG_PATH="$SETUP_DIR/ansible-$CURR_DATE.log"
+export ANSIBLE_LOG_PATH="$SETUP_LOGS_DIR/ansible-$CURR_DATE.log"
 ansible-playbook main.yml -K
