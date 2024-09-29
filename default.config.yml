@@ -9,7 +9,7 @@ configure_backup: true
 configure_spotlight: false
 
 dotfiles_repo: https://github.com/lb3dev/dotfiles.git
-dotfiles_repo_version: 53ce54b3165f5d3165fa85de49843fb1fe5fc493
+dotfiles_repo_version: a75a54ea19b40d2ba87eb2aaed3f16f743165aa9
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/.setup/dotfiles
 dotfiles_files:
