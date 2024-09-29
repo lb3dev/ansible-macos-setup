@@ -36,7 +36,6 @@ homebrew_cask_apps:
 dockutil_install: false
 dockitems_remove:
   - 'Launchpad'
-  - 'Safari'
   - 'Messages'
   - 'Mail'
   - 'Maps'
