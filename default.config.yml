@@ -12,7 +12,7 @@ backup_repo: https://github.com/lb3dev/ansible-macos-backup
 backup_repo_version: f671e6bf72bc9ce8d0636b87ed301314e5cf3e93
 
 dotfiles_repo: https://github.com/lb3dev/dotfiles.git
-dotfiles_repo_version: a75a54ea19b40d2ba87eb2aaed3f16f743165aa9
+dotfiles_repo_version: 3c9d953daf766f8fab543e007656add8cf0f417b
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/.setup/dotfiles
 dotfiles_files:
