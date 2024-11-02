@@ -2,11 +2,13 @@
 
 SETUP_DIR=~/.setup
 SETUP_LOGS_DIR="$SETUP_DIR/logs"
+SETUP_BACKUP_LOGS_DIR="$SETUP_DIR/logs/backup"
 CURR_DATE=$(date +%Y-%m-%d-%H%M%S)
 
 # Create ~/.setup as the default folder to store all setup related logs and files
 mkdir -p "$SETUP_DIR"
 mkdir -p "$SETUP_LOGS_DIR"
+mkdir -p "$SETUP_BACKUP_LOGS_DIR"
 
 # Capture all logs from this script to a new setup log file
 LOGFILE="$SETUP_LOGS_DIR/setup-$CURR_DATE.log"
