@@ -2,7 +2,10 @@ all:
 		./initial_setup.sh
 
 run:
-		source ~/.setup/venv-ansible/bin/activate && ansible-playbook main.yml -K
+		ansible-playbook main.yml -K
+
+dotfiles:
+		ansible-playbook main.yml --tags "dotfiles"
 
 dep:
 		source ~/.setup/venv-ansible/bin/activate && pip install -r requirements.txt
