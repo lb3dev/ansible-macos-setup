@@ -8,6 +8,9 @@ configure_backup: true
 
 configure_spotlight: false
 
+setup_repo: https://github.com/lb3dev/ansible-macos-setup
+setup_repo_version: master
+
 backup_repo: https://github.com/lb3dev/ansible-macos-backup
 backup_repo_version: f671e6bf72bc9ce8d0636b87ed301314e5cf3e93
 

@@ -1,4 +1,10 @@
 ---
+- name: Git checkout setup repo
+  git:
+    repo: "{{ setup_repo }}"
+    dest: "{{ ansible_env.HOME + '/.setup/ansible-macos-setup' }}"
+    version: "{{ setup_repo_version }}"
+
 - name: Git checkout backup repo
   git:
     repo: "{{ backup_repo }}"
