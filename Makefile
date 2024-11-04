@@ -4,6 +4,9 @@ all:
 run:
 		ansible-playbook main.yml -K
 
+terminal:
+		ansible-playbook main.yml --tags "terminal"
+
 dotfiles:
 		ansible-playbook main.yml --tags "dotfiles"
 

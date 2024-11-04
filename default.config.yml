@@ -1,6 +1,4 @@
 ---
-configure_terminal: true
-configure_dotfiles: true
 configure_dock: true
 configure_browser: true
 configure_defaults: true

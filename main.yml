@@ -14,9 +14,8 @@
       with_items: "{{ dockitems_persist }}"
   roles:
     - role: terminal
-      when: configure_terminal
+      tags: ['terminal']
     - role: geerlingguy.dotfiles
-      when: configure_dotfiles
       tags: ['dotfiles']
     - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
