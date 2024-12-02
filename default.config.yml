@@ -1,5 +1,5 @@
 ---
-configure_dock: true
+configure_dock: false
 configure_browser: true
 configure_defaults: true
 configure_backup: true
