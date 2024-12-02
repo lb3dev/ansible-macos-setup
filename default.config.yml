@@ -24,10 +24,7 @@ dotfiles_files:
 homebrew_taps: []
 
 homebrew_installed_packages:
-  - dockutil
   - jq
-  - ffmpeg
-  - yt-dlp
   - rdiff-backup
 
 homebrew_cask_apps:
@@ -36,8 +33,6 @@ homebrew_cask_apps:
   - keepassxc
   - firefox
   - google-chrome
-  - pycharm-ce
-  - utm
 
 dockutil_install: false
 dockitems_remove:
@@ -74,12 +69,8 @@ dockitems_persist_items:
     path: '/Applications/KeePassXC.app'
   - name: 'Sublime Text'
     path: '/Applications/Sublime Text.app'
-  - name: 'PyCharm CE'
-    path: '/Applications/PyCharm CE.app'
   - name: 'Terminal'
     path: '/System/Applications/Utilities/Terminal.app'
-  - name: 'UTM'
-    path: '/Applications/UTM.app'
   - name: 'Activity Monitor'
     path: '/System/Applications/Utilities/Activity Monitor.app'
   - name: 'Disk Utility'
