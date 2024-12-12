@@ -4,5 +4,7 @@ firefox_initial_pages:
   - 'https://addons.mozilla.org/en-CA/firefox/addon/ublock-origin'
 
 chrome_initial_pages:
-  - 'chrome://settings'
+  - 'chrome://settings/appearance'
+  - 'chrome://settings/payments'
+  - 'chrome://settings/addresses'
   - 'chrome://password-manager/settings'
