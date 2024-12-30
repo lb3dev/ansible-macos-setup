@@ -34,7 +34,7 @@ homebrew_cask_apps:
   - keepassxc
   - firefox
   - google-chrome
-  - pycharm-ce
+  - intellij-idea-ce
   - libreoffice
   - utm
 
@@ -73,8 +73,8 @@ dockitems_persist_items:
     path: '/Applications/KeePassXC.app'
   - name: 'Sublime Text'
     path: '/Applications/Sublime Text.app'
-  - name: 'PyCharm CE'
-    path: '/Applications/PyCharm CE.app'
+  - name: 'IntelliJ IDEA CE'
+    path: '/Applications/IntelliJ IDEA CE.app'
   - name: 'Terminal'
     path: '/System/Applications/Utilities/Terminal.app'
   - name: 'UTM'
