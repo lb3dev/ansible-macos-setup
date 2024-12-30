@@ -26,8 +26,6 @@ homebrew_taps: []
 homebrew_installed_packages:
   - dockutil
   - jq
-  - ffmpeg
-  - yt-dlp
   - rdiff-backup
 
 homebrew_cask_apps:
