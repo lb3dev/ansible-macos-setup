@@ -87,6 +87,8 @@ dockitems_persist_items:
     path: '/Applications/IntelliJ IDEA CE.app'
   - name: 'Terminal'
     path: '/System/Applications/Utilities/Terminal.app'
+  - name: 'LibreOffice'
+    path: '/Applications/LibreOffice.app'
   - name: 'UTM'
     path: '/Applications/UTM.app'
   - name: 'Activity Monitor'
