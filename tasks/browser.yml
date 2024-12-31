@@ -2,7 +2,11 @@
 - name: Open Firefox initial pages
   command: open -a 'Firefox' {{ item }}
   with_items: "{{ firefox_initial_pages | default([]) }}"
+  retries: 3
+  delay: 5
 
 - name: Open Chrome initial pages
   command: open -a 'Google Chrome' {{ item }}
   with_items: "{{ chrome_initial_pages | default([]) }}"
+  retries: 3
+  delay: 5

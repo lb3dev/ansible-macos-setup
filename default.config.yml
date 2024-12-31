@@ -21,6 +21,16 @@ dotfiles_files:
   - .gitignore
   - .gitconfig
 
+firefox_initial_pages:
+  - 'about:preferences'
+  - 'https://addons.mozilla.org/en-CA/firefox/addon/ublock-origin'
+
+chrome_initial_pages:
+  - 'chrome://settings/appearance'
+  - 'chrome://settings/payments'
+  - 'chrome://settings/addresses'
+  - 'chrome://password-manager/settings'
+
 homebrew_taps: []
 
 homebrew_installed_packages:
