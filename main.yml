@@ -12,6 +12,8 @@
       debug:
         msg: ""
       with_items: "{{ dockitems_persist }}"
+    - import_tasks: tasks/sudo_osx.yml
+      tags: osx
   roles:
     - role: terminal
       tags: terminal

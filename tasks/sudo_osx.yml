@@ -1,0 +1,12 @@
+---
+- name: Enable Firewall
+  command: /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+  become: true
+
+- name: Set Firewall to block all incoming connections
+  command: /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall on
+  become: true
+
+- name: Un hide Volumes folder in Finder
+  command: chflags nohidden /Volumes
+  become: true
