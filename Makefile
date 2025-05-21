@@ -10,6 +10,9 @@ terminal:
 dotfiles:
 		ansible-playbook main.yml --tags "dotfiles"
 
+browser:
+		ansible-playbook main.yml --tags "browser"
+
 dep:
 		source ~/.setup/venv-ansible/bin/activate && pip install -r requirements.txt
 

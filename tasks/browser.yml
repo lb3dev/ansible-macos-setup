@@ -1,12 +1,26 @@
 ---
+- name: Open Firefox initially
+  command: open -a 'Firefox'
+
+- name: Confirm Firefox opens successfully
+  pause:
+    prompt: "Proceed with Firefox settings? (Y/n)"
+  register: firefox_confirm
+
 - name: Open Firefox initial pages
   command: open -a 'Firefox' {{ item }}
   with_items: "{{ firefox_initial_pages | default([]) }}"
-  retries: 3
-  delay: 5
+  when: firefox_confirm.user_input | lower == 'y'
+
+- name: Open Google Chrome initially
+  command: open -a 'Google Chrome'
+
+- name: Confirm Google Chrome opens successfully
+  pause:
+    prompt: "Proceed with Google Chrome settings? (Y/n)"
+  register: chrome_confirm
 
 - name: Open Chrome initial pages
   command: open -a 'Google Chrome' {{ item }}
   with_items: "{{ chrome_initial_pages | default([]) }}"
-  retries: 3
-  delay: 5
+  when: chrome_confirm.user_input | lower == 'y'
