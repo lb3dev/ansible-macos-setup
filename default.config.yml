@@ -1,9 +1,4 @@
 ---
-configure_dock: true
-configure_browser: true
-configure_defaults: true
-configure_backup: true
-
 configure_spotlight: false
 
 setup_repo: https://github.com/lb3dev/ansible-macos-setup

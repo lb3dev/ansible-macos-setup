@@ -14,18 +14,18 @@
       with_items: "{{ dockitems_persist }}"
   roles:
     - role: terminal
-      tags: ['terminal']
+      tags: terminal
     - role: geerlingguy.dotfiles
-      tags: ['dotfiles']
+      tags: dotfiles
     - role: geerlingguy.mac.homebrew
-      tags: ['homebrew']
+      tags: homebrew
   tasks:
     - import_tasks: tasks/osx_defaults.yml
-      when: configure_defaults
+      tags: defaults
     - import_tasks: tasks/spotlight.yml
     - import_tasks: tasks/backup.yml
-      when: configure_backup
+      tags: backup
     - import_tasks: tasks/dock.yml
-      when: configure_dock
+      tags: dock
     - import_tasks: tasks/browser.yml
-      when: configure_browser
+      tags: browser
