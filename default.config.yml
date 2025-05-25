@@ -32,6 +32,7 @@ homebrew_installed_packages:
   - dockutil
   - jq
   - rdiff-backup
+  - restic
 
 homebrew_cask_apps:
   - android-file-transfer
