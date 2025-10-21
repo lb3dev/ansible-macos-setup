@@ -59,7 +59,7 @@ set +v
 # Setup virtualenv, update pip and install ansible and dependencies
 
 MACOS_VER=$(sw_vers -productVersion)
-if semver_greater_equal $MACOS_VER 11.7.10; then
+if semver_greater_equal $MACOS_VER 12.0; then
     setup_python3_macos
 else
     setup_python3_macos11
