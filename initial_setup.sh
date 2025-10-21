@@ -1,5 +1,21 @@
 #!/usr/bin/env bash
 
+function semver_greater_equal() {
+    printf '%s\n%s\n' "$2" "$1" | sort --check=quiet --version-sort
+}
+
+function setup_python3_macos11() {
+    set -x
+    # Install latest Python 3 for older macOS without system Python 3
+    brew install python@3.13
+    /usr/local/bin/python3 -m venv ~/.setup/venv-ansible
+}
+
+function setup_python3_macos() {
+    set -x
+    /usr/bin/python3 -m venv ~/.setup/venv-ansible
+}
+
 SETUP_DIR=~/.setup
 SETUP_LOGS_DIR="$SETUP_DIR/logs"
 SETUP_BACKUP_LOGS_DIR="$SETUP_DIR/logs/backup"
@@ -41,8 +57,13 @@ brew analytics off
 set +v
 
 # Setup virtualenv, update pip and install ansible and dependencies
-set -x
-/usr/bin/python3 -m venv ~/.setup/venv-ansible
+
+MACOS_VER=$(sw_vers -productVersion)
+if semver_greater_equal $MACOS_VER 11.7.10; then
+    setup_python3_macos
+else
+    setup_python3_macos11
+fi
 
 set +x
 source ~/.setup/venv-ansible/bin/activate
