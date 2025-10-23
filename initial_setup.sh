@@ -41,11 +41,11 @@ brew analytics off
 set +v
 
 # Install latest Python 3
+set -x
 brew install python@3.13
 
 # Setup virtualenv, update pip and install ansible and dependencies
-set -x
-/usr/local/bin/python3 -m venv ~/.setup/venv-ansible
+/usr/local/bin/python3.13 -m venv ~/.setup/venv-ansible
 
 set +x
 source ~/.setup/venv-ansible/bin/activate
