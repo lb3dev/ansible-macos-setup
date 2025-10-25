@@ -7,8 +7,8 @@ function semver_greater_equal() {
 function setup_python3_macos11() {
     set -x
     # Install latest Python 3 for older macOS without system Python 3
-    brew install python@3.13
-    /usr/local/bin/python3 -m venv ~/.setup/venv-ansible
+    brew install python@3.14
+    python3.14 -m venv ~/.setup/venv-ansible
 }
 
 function setup_python3_macos() {
