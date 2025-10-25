@@ -2,6 +2,3 @@
 - name: Open Firefox initial pages
   command: /Applications/Firefox.app/Contents/MacOS/firefox '{{ item }}'
   with_items: "{{ firefox_initial_pages | default([]) }}"
-
-- name: Open Chrome
-  command: open -a 'Google Chrome'
