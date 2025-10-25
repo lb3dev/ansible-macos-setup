@@ -26,7 +26,7 @@ set -u
 set -o pipefail
 
 # Set path for homebrew
-export PATH="$PATH:/opt/homebrew/bin"
+export PATH="$PATH:/opt/homebrew/bin:/usr/local/bin"
 
 # Install Homebrew if not installed (https://brew.sh)
 
@@ -42,10 +42,10 @@ set +v
 
 # Install latest Python 3
 set -x
-brew install python@3.13
+brew install python@3.14
 
 # Setup virtualenv, update pip and install ansible and dependencies
-/usr/local/bin/python3.13 -m venv ~/.setup/venv-ansible
+python3.14 -m venv ~/.setup/venv-ansible
 
 set +x
 source ~/.setup/venv-ansible/bin/activate
