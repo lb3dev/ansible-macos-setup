@@ -3,15 +3,18 @@
   vars_files:
     - default.config.yml
   pre_tasks:
+    - name: Get mac model name
+      shell: system_profiler SPHardwareDataType | grep "Model Name"
+      register: profile_output
+    - name: Set mac model variable
+      set_fact:
+        mac_model: '{{ profile_output.stdout | regex_replace("\s", "") | regex_replace("ModelName:", "") }}'
     - name: Update dockitems_persist_items with pos numbers
       set_fact:
         dockitems_persist: "{{ dockitems_persist | default([]) + [{ 'name': item.name, 'path': item.path, 'pos': dockitems_starting_pos | int }] }}"
         dockitems_starting_pos: "{{ dockitems_starting_pos | int + 1 }}"
       with_items: "{{ dockitems_persist_items | default([]) }}"
-    - name: Display dockitems_persist
-      debug:
-        msg: ""
-      with_items: "{{ dockitems_persist }}"
+    - import_tasks: tasks/debug_info.yml
     - import_tasks: tasks/sudo_osx.yml
       tags: osx
   roles:
