@@ -42,7 +42,7 @@ set -u
 set -o pipefail
 
 # Set path for homebrew
-export PATH="$PATH:/opt/homebrew/bin"
+export PATH="$PATH:/opt/homebrew/bin:/usr/local/bin"
 
 # Install Homebrew if not installed (https://brew.sh)
 
