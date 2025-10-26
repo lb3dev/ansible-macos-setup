@@ -206,3 +206,11 @@ osx_defaults:
   - {domain: com.apple.ActivityMonitor, key: UpdatePeriod, type: int, value: 2}
   # Change dock icon to show current CPU usage graph
   - {domain: com.apple.ActivityMonitor, key: IconType, type: int, value: 5}
+
+osx_defaults_sequoia:
+  ## Window Manager
+
+  # Only click to show desktop in Stage Manager, not in normal desktop
+  - { domain: com.apple.WindowManager, key: EnableStandardClickToShowDesktop, type: bool, value: false }
+  # Disable window tiling margins
+  - { domain: com.apple.WindowManager, key: EnableTiledWindowMargins, type: bool, value: false }
