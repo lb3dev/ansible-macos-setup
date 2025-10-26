@@ -15,8 +15,6 @@
         dockitems_starting_pos: "{{ dockitems_starting_pos | int + 1 }}"
       with_items: "{{ dockitems_persist_items | default([]) }}"
     - import_tasks: tasks/debug_info.yml
-    - import_tasks: tasks/sudo_osx.yml
-      tags: osx
   roles:
     - role: terminal
       tags: terminal
@@ -34,3 +32,5 @@
       tags: dock
     - import_tasks: tasks/browser.yml
       tags: browser
+    - import_tasks: tasks/sudo_osx.yml
+      tags: osx
