@@ -23,7 +23,7 @@
     - role: geerlingguy.mac.homebrew
       tags: homebrew
   tasks:
-    - import_tasks: tasks/osx_defaults.yml
+    - import_tasks: tasks/defaults.yml
       tags: defaults
     - import_tasks: tasks/spotlight.yml
     - import_tasks: tasks/backup.yml

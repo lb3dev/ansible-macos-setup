@@ -207,6 +207,13 @@ osx_defaults:
   # Change dock icon to show current CPU usage graph
   - {domain: com.apple.ActivityMonitor, key: IconType, type: int, value: 5}
 
+osx_defaults_macbook:
+  # Bottom right click on trackpad for secondary click
+  - { domain: com.apple.AppleMultitouchTrackpad, key: TrackpadRightClick, type: bool, value: false }
+  - { domain: com.apple.AppleMultitouchTrackpad, key: TrackpadCornerSecondaryClick, type: int, value: 2 }
+  - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: TrackpadRightClick, type: bool, value: false }
+  - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: TrackpadCornerSecondaryClick, type: int, value: 2 }
+
 osx_defaults_sequoia:
   ## Window Manager
 

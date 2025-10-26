@@ -1,0 +1,17 @@
+---
+- include_tasks: tasks/osx_defaults.yml
+  vars:
+    task_name: "Run macOS defaults"
+    defaults_list: "{{ osx_defaults }}"
+
+- include_tasks: tasks/osx_defaults.yml
+  vars:
+    task_name: "Run macOS defaults (MacBooks only)"
+    defaults_list: "{{ osx_defaults_macbook }}"
+  when: "'MacBook' in mac_model"
+
+- include_tasks: tasks/osx_defaults.yml
+  vars:
+    task_name: "Run macOS defaults (Sequoia and later)"
+    defaults_list: "{{ osx_defaults_sequoia }}"
+  when: "ansible_distribution_version is version('15.0', '>=')"

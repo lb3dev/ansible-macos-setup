@@ -1,19 +1,9 @@
 ---
-- name: Run macOS defaults
+- name: "{{ task_name }}"
   osx_defaults:
     domain: "{{ item.domain }}"
     key: "{{ item.key }}"
     type: "{{ item.type }}"
     value: "{{ item.value }}"
     state: "{{ item.state | default('present') }}"
-  with_items: "{{ osx_defaults | default([]) }}"
-
-- name: Run macOS defaults (Sequoia and later)
-  osx_defaults:
-    domain: "{{ item.domain }}"
-    key: "{{ item.key }}"
-    type: "{{ item.type }}"
-    value: "{{ item.value }}"
-    state: "{{ item.state | default('present') }}"
-  with_items: "{{ osx_defaults_sequoia | default([]) }}"
-  when: "ansible_distribution_version is version('15.0', '>=')"
+  with_items: "{{ defaults_list | default([]) }}"
