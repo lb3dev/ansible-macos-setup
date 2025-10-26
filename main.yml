@@ -6,14 +6,28 @@
     - name: Get mac model name
       shell: system_profiler SPHardwareDataType | grep "Model Name"
       register: profile_output
+
     - name: Set mac model variable
       set_fact:
         mac_model: '{{ profile_output.stdout | regex_replace("\s", "") | regex_replace("ModelName:", "") }}'
+
+    - name: Confirm install extra Homebrew apps
+      pause:
+        prompt: "Proceed with Homebrew extra installs? (Y/n)"
+      register: extra_confirm
+
+    - name: Update extra installs
+      set_fact:
+        homebrew_cask_apps: "{{ homebrew_cask_apps + homebrew_cask_apps_extra }}"
+        dockitems_persist_items: "{{ dockitems_persist_items + dockitems_persist_items_extra }}"
+      when: extra_confirm.user_input | lower == 'y'
+
     - name: Update dockitems_persist_items with pos numbers
       set_fact:
         dockitems_persist: "{{ dockitems_persist | default([]) + [{ 'name': item.name, 'path': item.path, 'pos': dockitems_starting_pos | int }] }}"
         dockitems_starting_pos: "{{ dockitems_starting_pos | int + 1 }}"
       with_items: "{{ dockitems_persist_items | default([]) }}"
+
     - import_tasks: tasks/debug_info.yml
   roles:
     - role: terminal
