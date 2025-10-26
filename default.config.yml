@@ -221,3 +221,7 @@ osx_defaults_sequoia:
   - { domain: com.apple.WindowManager, key: EnableStandardClickToShowDesktop, type: bool, value: false }
   # Disable window tiling margins
   - { domain: com.apple.WindowManager, key: EnableTiledWindowMargins, type: bool, value: false }
+
+plists:
+  # Set sort by: snap to grid on desktop
+  - { command: '"Set :DesktopViewSettings:IconViewSettings:arrangeBy grid"', plist: '~/Library/Preferences/com.apple.finder.plist' }

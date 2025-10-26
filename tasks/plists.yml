@@ -1,0 +1,4 @@
+---
+- name: Run plists
+  command: /usr/libexec/PlistBuddy -c {{ item.command }} {{ item.plist }}
+  with_items: "{{ plists | default([]) }}"
