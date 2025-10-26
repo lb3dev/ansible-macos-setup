@@ -222,6 +222,17 @@ osx_defaults_sequoia:
   # Disable window tiling margins
   - { domain: com.apple.WindowManager, key: EnableTiledWindowMargins, type: bool, value: false }
 
+  ## Dock
+
+  # Disable dragging window on top to enter Mission Control
+  - { domain: com.apple.dock, key: enterMissionControlByTopWindowDrag, type: bool, value: false }
+
+osx_defaults_tahoe:
+  ## Widget
+
+  # Always dim desktop widgets
+  - { domain: com.apple.widgets, key: widgetAppearance, type: int, value: 0 }
+
 plists:
   # Set sort by: snap to grid on desktop
   - { command: '"Set :DesktopViewSettings:IconViewSettings:arrangeBy grid"', plist: '~/Library/Preferences/com.apple.finder.plist' }

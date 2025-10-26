@@ -15,3 +15,9 @@
     task_name: "Run macOS defaults (Sequoia and later)"
     defaults_list: "{{ osx_defaults_sequoia }}"
   when: "ansible_distribution_version is version('15.0', '>=')"
+
+- include_tasks: tasks/osx_defaults.yml
+  vars:
+    task_name: "Run macOS defaults (Tahoe and later)"
+    defaults_list: "{{ osx_defaults_tahoe }}"
+  when: "ansible_distribution_version is version('26.0', '>=')"
