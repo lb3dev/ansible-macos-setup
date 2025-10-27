@@ -2,7 +2,8 @@
 - name: Output ansible playbook runtime debug info
   debug:
     msg:
-      - 'Python: {{ ansible_playbook_python }}'
+      - 'Python Version: {{ ansible_python_version }}'
+      - 'Python Path: {{ ansible_playbook_python }}'
       - 'Ansible: {{ ansible_version.full }}'
       - 'macOS Version: {{ ansible_distribution_version }}'
       - 'Model: {{ mac_model }}'
