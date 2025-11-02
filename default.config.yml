@@ -69,6 +69,8 @@ dockitems_starting_pos: 1
 dockitems_persist_items:
   - name: 'Calendar'
     path: '/System/Applications/Calendar.app'
+  - name: 'Calculator'
+    path: '/System/Applications/Calculator.app'
   - name: 'Android File Transfer'
     path: '/Applications/Android File Transfer.app'
   - name: 'Safari'
