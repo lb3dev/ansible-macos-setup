@@ -12,8 +12,14 @@
   with_items: "{{ firefox_initial_pages | default([]) }}"
   when: firefox_confirm.user_input | lower == 'y'
 
+- name: Confirm Firefox settings are completed
+  pause:
+    prompt: "Completed with Firefox settings? (Y/n)"
+  register: firefox_complete
+
 - name: Open Google Chrome initially
   command: open -a 'Google Chrome'
+  when: firefox_complete.user_input | lower == 'y'
 
 - name: Confirm Google Chrome opens successfully
   pause:
