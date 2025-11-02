@@ -22,6 +22,11 @@
         dockitems_persist_items: "{{ dockitems_persist_items + dockitems_persist_items_extra }}"
       when: extra_confirm.user_input | lower == 'y'
 
+    - name: Update extra dock remove (Tahoe or later)
+      set_fact:
+        dockitems_remove: "{{ dockitems_remove + dockitems_remove_tahoe }}"
+      when: "ansible_distribution_version is version('26.0', '>=')"
+
     - name: Update dockitems_persist_items with pos numbers
       set_fact:
         dockitems_persist: "{{ dockitems_persist | default([]) + [{ 'name': item.name, 'path': item.path, 'pos': dockitems_starting_pos | int }] }}"

@@ -64,6 +64,12 @@ dockitems_remove:
   - 'App Store'
   - 'Freeform'
 
+dockitems_remove_tahoe:
+  - 'Apps'
+  - 'Phone'
+  - 'Games'
+  - 'iPhone Mirroring'
+
 dockitems_persist: []
 dockitems_starting_pos: 1
 dockitems_persist_items:
