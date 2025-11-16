@@ -13,6 +13,9 @@ dotfiles:
 browser:
 		ansible-playbook main.yml --tags "browser"
 
+backup:
+		ansible-playbook main.yml --tags "backup"
+
 dep:
 		source ~/.setup/venv-ansible/bin/activate && pip install -r requirements.txt
 
