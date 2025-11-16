@@ -5,7 +5,7 @@ setup_repo: https://github.com/lb3dev/ansible-macos-setup
 setup_repo_version: master
 
 backup_repo: https://github.com/lb3dev/ansible-macos-backup
-backup_repo_version: 038ac4ee2fc77c7891426bd1e4efac21881d4112
+backup_repo_version: 3c28c35f484b4f05dac2cadea0affb7fd4f8c3d7
 
 dotfiles_repo: https://github.com/lb3dev/dotfiles.git
 dotfiles_repo_version: master
