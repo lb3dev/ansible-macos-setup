@@ -7,6 +7,6 @@
   command: /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall on
   become: true
 
-- name: Un hide Volumes folder in Finder
+- name: Unhide Volumes folder in Finder
   command: chflags nohidden /Volumes
   become: true
