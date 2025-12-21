@@ -12,12 +12,12 @@ dotfiles_repo_version: master
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/.setup/dotfiles
 dotfiles_files:
+  - configs
   - .zshrc
   - .gitignore
   - .gitconfig
 
 firefox_initial_pages:
-  - 'about:preferences'
   - 'https://addons.mozilla.org/en-CA/firefox/addon/ublock-origin'
 
 chrome_initial_pages:

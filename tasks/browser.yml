@@ -12,6 +12,19 @@
   with_items: "{{ firefox_initial_pages | default([]) }}"
   when: firefox_confirm.user_input | lower == 'y'
 
+- name: Find default Firefox profile folder
+  find:
+    paths: "~/Library/Application Support/Firefox/Profiles"
+    patterns: "*.default-release"
+    file_type: "directory"
+  register: find_result
+
+- name: Copy user.js to default Firefox profile folder
+  copy:
+    src: "{{ dotfiles_repo_local_destination }}/configs/firefox/user.js"
+    dest: "{{ find_result.files[0].path }}"
+  when: find_result.matched == 1
+
 - name: Confirm Firefox settings are completed
   pause:
     prompt: "Completed with Firefox settings? (Y/n)"
