@@ -40,10 +40,10 @@ homebrew_cask_apps:
   - keepassxc
   - firefox
   - google-chrome
+  - libreoffice
 
 homebrew_cask_apps_extra:
   - intellij-idea-ce
-  - libreoffice
   - utm
 
 dockutil_install: false
@@ -89,6 +89,8 @@ dockitems_persist_items:
     path: '/Applications/KeePassXC.app'
   - name: 'Sublime Text'
     path: '/Applications/Sublime Text.app'
+  - name: 'LibreOffice'
+    path: '/Applications/LibreOffice.app'
   - name: 'Terminal'
     path: '/System/Applications/Utilities/Terminal.app'
   - name: 'Activity Monitor'
@@ -101,8 +103,6 @@ dockitems_persist_items:
 dockitems_persist_items_extra:
   - name: 'IntelliJ IDEA CE'
     path: '/Applications/IntelliJ IDEA CE.app'
-  - name: 'LibreOffice'
-    path: '/Applications/LibreOffice.app'
   - name: 'UTM'
     path: '/Applications/UTM.app'
 
