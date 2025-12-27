@@ -18,12 +18,15 @@
     patterns: "*.default-release"
     file_type: "directory"
   register: find_result
+  when: firefox_confirm.user_input | lower == 'y'
 
 - name: Copy user.js to default Firefox profile folder
   copy:
     src: "{{ dotfiles_repo_local_destination }}/configs/firefox/user.js"
     dest: "{{ find_result.files[0].path }}"
-  when: find_result.matched == 1
+  when:
+    - firefox_confirm.user_input | lower == 'y'
+    - find_result.matched == 1
 
 - name: Confirm Firefox settings are completed
   pause:
