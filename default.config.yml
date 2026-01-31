@@ -137,8 +137,6 @@ spotlight_defaults: {domain: com.apple.Spotlight, key: orderedItems, type: array
 osx_defaults:
   ## General UI
 
-  # Always expand Save UI panels
-  - {domain: NSGlobalDomain, key: NSNavPanelExpandedStateForSaveMode, type: bool, value: true}
   # Save to disk (not to iCloud) by default
   - {domain: NSGlobalDomain, key: NSDocumentSaveNewDocumentsToCloud, type: bool, value: false}
   # Always show scroll bars (WhenScrolling, Automatic and Always)
