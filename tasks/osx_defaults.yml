@@ -6,4 +6,14 @@
     type: "{{ item.type }}"
     value: "{{ item.value }}"
     state: "{{ item.state | default('present') }}"
-  with_items: "{{ defaults_list | default([]) }}"
+  with_items: "{{ defaults_list | rejectattr('currentHost', 'defined') | default([]) }}"
+
+- name: "{{ task_name }} - Current Host"
+  osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+    host: currentHost
+    state: "{{ item.state | default('present') }}"
+  with_items: "{{ defaults_list | selectattr('currentHost', 'defined') | selectattr('currentHost') | default([]) }}"

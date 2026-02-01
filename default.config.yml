@@ -224,6 +224,9 @@ osx_defaults_macbook:
   - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: TrackpadRightClick, type: bool, value: false }
   - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: TrackpadCornerSecondaryClick, type: int, value: 2 }
 
+  # Show battery percentage
+  - { domain: com.apple.controlcenter, key: Bluetooth, type: bool, value: true, currentHost: true }
+
 osx_defaults_sequoia:
   ## Window Manager
 
@@ -241,6 +244,15 @@ osx_defaults_sequoia:
 
   # Always dim desktop widgets / monochrome
   - { domain: com.apple.widgets, key: widgetAppearance, type: int, value: 0 }
+
+  ## Control center
+
+  # Sound (8 - Don't Show, 2 - Show when active, 18 - Always Show)
+  - { domain: com.apple.controlcenter, key: Sound, type: int, value: 18, currentHost: true }
+  # AirDrop (8 - Don't Show, 2 - Always Show)
+  - { domain: com.apple.controlcenter, key: AirDrop, type: int, value: 2, currentHost: true }
+  # Bluetooth (8 - Don't Show, 2 - Always Show)
+  - { domain: com.apple.controlcenter, key: Bluetooth, type: int, value: 2, currentHost: true }
 
 plists:
   # Set sort by: snap to grid on desktop
