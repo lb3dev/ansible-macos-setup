@@ -225,7 +225,7 @@ osx_defaults_macbook:
   - { domain: com.apple.driver.AppleBluetoothMultitouch.trackpad, key: TrackpadCornerSecondaryClick, type: int, value: 2 }
 
   # Show battery percentage
-  - { domain: com.apple.controlcenter, key: Bluetooth, type: bool, value: true, currentHost: true }
+  - { domain: com.apple.controlcenter, key: BatteryShowPercentage, type: bool, value: true, currentHost: true }
 
 osx_defaults_sequoia:
   ## Window Manager
