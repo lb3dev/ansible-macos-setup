@@ -4,5 +4,7 @@ roles:
     version: "1.2.1"
 
 collections:
+  - name: community.general
+    version: "13.4.0"
   - name: geerlingguy.mac
     version: "4.0.2"
