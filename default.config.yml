@@ -43,7 +43,6 @@ homebrew_cask_apps:
   - libreoffice
 
 homebrew_cask_apps_extra:
-  - intellij-idea-ce
   - utm
 
 dockutil_install: false
